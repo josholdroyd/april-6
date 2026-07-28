@@ -48,7 +48,7 @@ export const events: TimelineEvent[] = [
     displayDate: "April 6, 1 BC (interpreted)",
     title: "Interpreted birth date of Jesus Christ",
     description:
-      'Doctrine and Covenants 20:1 describes the Church’s 1830 organization as occurring "one thousand eight hundred and thirty years since the coming of our Lord and Savior Jesus Christ in the flesh... on the sixth day of the month which is called April." Some have read this as Joseph Smith identifying April 6, 1 BC as Christ’s literal birthdate — a reading that is disputed, not settled doctrine.',
+      'Doctrine and Covenants 20:1 describes the Church’s 1830 organization as occurring "one thousand eight hundred and thirty years since the coming of our Lord and Savior Jesus Christ in the flesh... on the sixth day of the month which is called April." Some have read this as Joseph Smith identifying April 6, 1 BC as Christ’s literal birthdate, a reading that is disputed, not settled doctrine.',
     category: "Interpretive",
     isInterpretive: true,
     sources: [EOM, CONFERENCE, WIKIPEDIA],
@@ -99,7 +99,7 @@ export const events: TimelineEvent[] = [
     displayDate: "April 6, 1877",
     title: "St. George Temple dedicated",
     description:
-      "The St. George Temple was completed and dedicated — the only temple finished during Brigham Young’s 30 years as Church President.",
+      "The St. George Temple was completed and dedicated, the only temple finished during Brigham Young’s 30 years as Church President.",
     category: "St. George Temple",
     sources: [WIKIPEDIA, EOM],
   },
@@ -129,7 +129,7 @@ export const events: TimelineEvent[] = [
     displayDate: "April 6, 1896",
     title: "First modern Olympic Games open (Athens)",
     description:
-      "Included for scale/context — a major world event that also happens to fall on April 6.",
+      "Included for scale/context: a major world event that also happens to fall on April 6.",
     category: "Outside the Church",
     sources: [EXPLAINED],
   },
