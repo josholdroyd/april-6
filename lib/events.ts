@@ -6,7 +6,6 @@ export type EventCategory =
   | "St. George Temple"
   | "Priesthood & Callings"
   | "Modern Temples"
-  | "Outside the Church"
   | "Interpretive";
 
 export interface TimelineEvent {
@@ -47,6 +46,14 @@ const PROCLAMATION = {
 const MERIDIAN = {
   label: "Was April 6th Jesus' Birthdate? — Meridian Magazine",
   url: "https://latterdaysaintmag.com/was-april-6th-jesus-birthdate/",
+};
+const CENTENNIAL = {
+  label: "Centennial Observances — Encyclopedia of Mormonism",
+  url: "https://eom.byu.edu/index.php/Centennial_Observances",
+};
+const DESERET = {
+  label: "History of LDS General Conference — Deseret News",
+  url: "https://www.deseret.com/2000/4/1/19499283/history-of-lds-general-conference/",
 };
 
 export const events: TimelineEvent[] = [
@@ -132,24 +139,14 @@ export const events: TimelineEvent[] = [
     sources: [UNIVERSE, WIKIPEDIA, EOM],
   },
   {
-    id: "olympics-1896",
-    year: 1896,
-    displayDate: "April 6, 1896",
-    title: "First modern Olympic Games open (Athens)",
+    id: "centennial-1930",
+    year: 1930,
+    displayDate: "April 6, 1930",
+    title: "Church centennial (100th anniversary)",
     description:
-      "Included for scale/context: a major world event that also happens to fall on April 6.",
-    category: "Outside the Church",
-    sources: [EXPLAINED],
-  },
-  {
-    id: "north-pole-1909",
-    year: 1909,
-    displayDate: "April 6, 1909",
-    title: "Peary expedition reaches the North Pole",
-    description:
-      "Included for scale/context, same rationale as above.",
-    category: "Outside the Church",
-    sources: [EXPLAINED],
+      "About 100,000 people gathered in Salt Lake City for the Church’s 100th-anniversary general conference, with a First Presidency address broadcast by radio to more than a thousand meetinghouses. Congregations everywhere joined in the hosanna shout usually reserved for temple dedications, and B. H. Roberts’ multivolume Comprehensive History of the Church was published for the occasion.",
+    category: "Church Founding",
+    sources: [CENTENNIAL, DESERET],
   },
   {
     id: "assistants-to-twelve-1941",
@@ -192,7 +189,6 @@ export const categories: EventCategory[] = [
   "St. George Temple",
   "Priesthood & Callings",
   "Modern Temples",
-  "Outside the Church",
 ];
 
 /** Accent color per category, used for node dots, chips, and card rules. */
@@ -204,7 +200,6 @@ export const categoryColor: Record<EventCategory, string> = {
   "St. George Temple": "#4a6b58",
   "Priesthood & Callings": "#6b4a6b",
   "Modern Temples": "#33627a",
-  "Outside the Church": "#8a8175",
   Interpretive: "#a67c34",
 };
 
@@ -216,4 +211,6 @@ export const sources = [
   { label: "The Sixth Day of April, 1830 — General Conference, April 1991", url: "https://www.churchofjesuschrist.org/study/general-conference/1991/04/the-sixth-day-of-april-1830?lang=eng" },
   { label: "Proclamation, April 6, 1980 — General Conference", url: "https://www.churchofjesuschrist.org/study/general-conference/1980/04/proclamation?lang=eng" },
   { label: "Was April 6th Jesus' Birthdate? — Meridian Magazine", url: "https://latterdaysaintmag.com/was-april-6th-jesus-birthdate/" },
+  { label: "Centennial Observances — Encyclopedia of Mormonism", url: "https://eom.byu.edu/index.php/Centennial_Observances" },
+  { label: "History of LDS General Conference — Deseret News", url: "https://www.deseret.com/2000/4/1/19499283/history-of-lds-general-conference/" },
 ];
