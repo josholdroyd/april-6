@@ -20,8 +20,13 @@ const EVEN_GAP = 232; // gap used by the "even spacing" view
 const CARD_W = 320;
 const LEAD = CARD_W / 2 + 24; // room for the first card's left half
 const BREAK_W = 232; // width of the compressed-axis gap marker
-const LANE_H = 960; // total track height; axis runs down the middle
 const STEM = 34; // gap between the axis and a card edge
+// The lane hugs the collapsed cards and only grows to make room for an open
+// one, so a closed timeline isn't padded out by space nothing is using.
+// Sized off the tallest card in each state: half the lane, less STEM, must
+// clear a card's full height or overflow-y-hidden will clip it.
+const LANE_CLOSED = 440;
+const LANE_OPEN = 1020;
 
 /** Events before the modern era sit on the far side of the axis break. */
 const isAncient = (e: TimelineEvent) => e.year < 1800;
@@ -81,6 +86,7 @@ export default function Timeline() {
   const [expanded, setExpanded] = useState<string | null>(null);
 
   const { placed, breakAt, width } = useMemo(() => layout(mode), [mode]);
+  const laneH = expanded ? LANE_OPEN : LANE_CLOSED;
   const ordered = useMemo(
     () => [...events].sort((a, b) => a.year - b.year),
     [],
@@ -191,9 +197,12 @@ export default function Timeline() {
       </div>
 
       {/* ---------------- Horizontal thread (desktop) ---------------- */}
-      <div className="mt-8 hidden lg:block">
+      <div className="mt-3 hidden lg:block">
         <div className="thread-scroll overflow-x-auto overflow-y-hidden pb-4">
-          <div className="relative" style={{ width, height: LANE_H }}>
+          <div
+            className="relative transition-[height] duration-300 ease-out"
+            style={{ width, height: laneH }}
+          >
             {/* The thread itself */}
             <div
               className="absolute left-0 right-0 top-1/2 h-px -translate-y-1/2 bg-parchment-edge"
@@ -222,15 +231,16 @@ export default function Timeline() {
                   initial={{ opacity: 0, y: side === "above" ? 12 : -12 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: Math.min(i * 0.05, 0.6) }}
-                  className="absolute top-0"
-                  style={{ left: x, height: LANE_H, width: 0 }}
+                  className="absolute inset-y-0"
+                  style={{ left: x, width: 0 }}
                 >
                   {/* Stem from the thread out to the card */}
                   <div
                     className="absolute left-0 w-px -translate-x-1/2 bg-parchment-edge"
                     style={{
                       height: STEM,
-                      top: side === "above" ? LANE_H / 2 - STEM : LANE_H / 2,
+                      top:
+                        side === "above" ? `calc(50% - ${STEM}px)` : "50%",
                     }}
                     aria-hidden
                   />
@@ -241,7 +251,7 @@ export default function Timeline() {
                       (dimmed ? "opacity-25" : "opacity-100") +
                       (event.isInterpretive ? " ring-2 ring-brass/40" : "")
                     }
-                    style={{ backgroundColor: accent, top: LANE_H / 2 }}
+                    style={{ backgroundColor: accent, top: "50%" }}
                     aria-hidden
                   />
                   {/* Card */}
@@ -250,8 +260,8 @@ export default function Timeline() {
                     style={{
                       width: CARD_W,
                       ...(side === "above"
-                        ? { bottom: LANE_H / 2 + STEM }
-                        : { top: LANE_H / 2 + STEM }),
+                        ? { bottom: `calc(50% + ${STEM}px)` }
+                        : { top: `calc(50% + ${STEM}px)` }),
                     }}
                   >
                     <EventCard
