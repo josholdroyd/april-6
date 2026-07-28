@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    @apply bg-parchment text-ink font-sans;
+    /* Faint fibrous paper tooth — two low-contrast gradients, no image assets. */
+    background-image:
+      radial-gradient(ellipse at 15% 10%, rgba(222, 210, 185, 0.55), transparent 55%),
+      radial-gradient(ellipse at 85% 85%, rgba(214, 199, 170, 0.4), transparent 60%);
+    background-attachment: fixed;
+  }
+
+  ::selection {
+    background: rgba(166, 124, 52, 0.28);
+  }
+}
+
+@layer components {
+  .rule {
+    @apply border-parchment-edge;
+  }
+
+  /* Thin horizontal scrollbar styled to match the parchment palette. */
+  .thread-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: #cbbe9f transparent;
+  }
+  .thread-scroll::-webkit-scrollbar {
+    height: 10px;
+  }
+  .thread-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .thread-scroll::-webkit-scrollbar-thumb {
+    background: #cbbe9f;
+    border-radius: 999px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
