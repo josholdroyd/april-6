@@ -185,12 +185,6 @@ export default function Timeline() {
           ) : (
             <>
               Select a card to read the full entry and its sources.
-              <span className="hidden lg:inline">
-                {" "}
-                The axis is broken between 1&nbsp;BC and 1830; in “by year” view
-                spacing is proportional except where crowded years are nudged
-                apart to stay legible.
-              </span>
             </>
           )}
         </p>
