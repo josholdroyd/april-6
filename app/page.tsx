@@ -13,7 +13,7 @@ export default function Home() {
         <p className="mt-5 max-w-[65ch] font-serif text-[17px] leading-[1.7] text-ink-soft">
           The sixth of April recurs across the history of The Church of Jesus
           Christ of Latter-day Saints with a persistence that is hard to read as
-          coincidence, and hard to prove as anything else. Twelve entries
+          coincidence, and hard to prove as anything else. Thirteen entries
           below, from a disputed reading of D&amp;C 20:1 to a temple dedicated on
           the Church&rsquo;s 170th anniversary, with two unrelated world events
           included for scale.

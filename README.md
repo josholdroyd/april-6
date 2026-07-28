@@ -10,7 +10,7 @@ All data is static — no database, no API keys, no environment variables.
 
 | Route         | What it is                                                        |
 | ------------- | ----------------------------------------------------------------- |
-| `/`           | Interactive timeline of all 12 events, with category filters       |
+| `/`           | Interactive timeline of all 13 events, with category filters       |
 | `/reflection` | Personal essay page (placeholder awaiting your paragraphs)         |
 
 ## Local development
@@ -29,8 +29,8 @@ npm start       # serve the production build
 
 ## Where things live
 
-- `lib/events.ts` — the entire dataset: the 12 events, category list, category
-  accent colors, and the 5 footer sources. Edit event copy here.
+- `lib/events.ts` — the entire dataset: the 13 events, category list, category
+  accent colors, and the 7 footer sources. Edit event copy here.
 - `components/Timeline.tsx` — layout math and the two views (horizontal thread
   on desktop, vertical rail on mobile).
 - `components/EventCard.tsx` — a single event card and its expand behavior.
@@ -40,7 +40,7 @@ npm start       # serve the production build
 
 ## The timeline's scale problem
 
-The dataset spans 1 BC to 2000 AD, but 11 of 12 events fall between 1830 and 2000.
+The dataset spans 1 BC to 2000 AD, but 12 of 13 events fall between 1830 and 2000.
 Two things keep it readable:
 
 1. **A broken axis.** The 1 BC entry sits on the far side of an explicit

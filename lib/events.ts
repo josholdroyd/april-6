@@ -40,6 +40,14 @@ const CONFERENCE = {
   label: "The Sixth Day of April, 1830 — General Conference, April 1991",
   url: "https://www.churchofjesuschrist.org/study/general-conference/1991/04/the-sixth-day-of-april-1830?lang=eng",
 };
+const PROCLAMATION = {
+  label: "Proclamation, April 6, 1980 — General Conference",
+  url: "https://www.churchofjesuschrist.org/study/general-conference/1980/04/proclamation?lang=eng",
+};
+const MERIDIAN = {
+  label: "Was April 6th Jesus' Birthdate? — Meridian Magazine",
+  url: "https://latterdaysaintmag.com/was-april-6th-jesus-birthdate/",
+};
 
 export const events: TimelineEvent[] = [
   {
@@ -154,6 +162,16 @@ export const events: TimelineEvent[] = [
     sources: [WIKIPEDIA, EXPLAINED],
   },
   {
+    id: "sesquicentennial-1980",
+    year: 1980,
+    displayDate: "April 6, 1980",
+    title: "Church’s sesquicentennial (150th anniversary)",
+    description:
+      "President Spencer W. Kimball read a First Presidency proclamation from the reconstructed Peter Whitmer Farm in Fayette, NY, the Church’s first-ever satellite broadcast of general conference. That year April 6 fell on Easter Sunday, and Kimball used the occasion to restate that Christ was born on April 6, linking the founding and interpretive threads.",
+    category: "Church Founding",
+    sources: [PROCLAMATION, MERIDIAN],
+  },
+  {
     id: "palmyra-2000",
     year: 2000,
     displayDate: "April 6, 2000",
@@ -196,4 +214,6 @@ export const sources = [
   { label: "April 6, an important date in LDS Church history — BYU Daily Universe", url: "https://universe.byu.edu/2002/04/04/april-6-an-important-date-in-lds-church-history/" },
   { label: "April 6 (LDS Church) — Everything Explained", url: "https://everything.explained.today/April_6_(LDS_Church)/" },
   { label: "The Sixth Day of April, 1830 — General Conference, April 1991", url: "https://www.churchofjesuschrist.org/study/general-conference/1991/04/the-sixth-day-of-april-1830?lang=eng" },
+  { label: "Proclamation, April 6, 1980 — General Conference", url: "https://www.churchofjesuschrist.org/study/general-conference/1980/04/proclamation?lang=eng" },
+  { label: "Was April 6th Jesus' Birthdate? — Meridian Magazine", url: "https://latterdaysaintmag.com/was-april-6th-jesus-birthdate/" },
 ];
