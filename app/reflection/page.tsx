@@ -21,12 +21,45 @@ export default function ReflectionPage() {
       <hr className="my-10 border-parchment-edge" />
 
       <div className="max-w-[70ch] space-y-6 font-serif text-[18px] leading-[1.8] text-ink-soft [&>p]:max-w-[70ch]">
-        {/* TODO(Josh): Replace this with your own paragraphs on the significance of April 6.
-            Suggested structure: (1) what initially caught your interest, (2) which
-            recurrence surprised you most and why, (3) your take on the disputed
-            Christ-birthdate reading, (4) what this pattern means to you personally. */}
-        <p className="italic text-ink-faint">
-          [Write your reflection here — see TODO comment in source.]
+        <p>
+          I have always viewed April 6th as a most interesting date in Church
+          history, obviously attributable to the birth of Christ as given by
+          D&amp;C 20:1, but also due to the organization of the Church of
+          Christ. We are taught of the symbolism surrounding spiritual rebirth
+          via baptism, but this correlation makes me think of the Church&rsquo;s
+          nature in a similar manner. The reorganization represents an effort to
+          refocus our lives and our intents on Jesus Christ through an organized
+          body that aids us in that endeavor. As did Christ&rsquo;s birth pave
+          the way for a new light upon the Earth, the events of April 6th, 1830
+          usher into the world a new hope into the dispensation of the fullness
+          of times. The date helps to strengthen my testimony in Jesus Christ
+          and in His centrality in our faith.
+        </p>
+
+        <p>
+          In like manner, the date reinforces my testimony in Joseph Smith as a
+          true prophet of God. Of course, God trusted Joseph Smith enough to
+          lead the Church into this last dispensation, but I feel like this
+          overlap has really helped to solidify my conviction in D&amp;C 135:3,
+          which states: &ldquo;Joseph Smith, the Prophet and Seer of the Lord,
+          has done more, save Jesus only, for the salvation of men in this
+          world, than any other man that ever lived in it.&rdquo; This milestone
+          event in Joseph&rsquo;s prophetic journey seems to truly encapsulate
+          his role in bringing to pass God&rsquo;s plan as it references direct
+          relation to our Savior&rsquo;s birth.
+        </p>
+
+        <p>
+          The fact that there have been so many other prominent events in Church
+          history that have occurred on April 6th has served as a wonderful
+          reminder to me of God constantly being present in the details of our
+          lives. We are blessed to have many general conferences and even
+          Easters occur on this date, which help to keep Jesus Christ and the
+          Church&rsquo;s reorganization at the forefront of our minds. I am
+          immensely appreciative to be a part of a Church that so frequently
+          brings my thoughts back to the Savior, aiding me in being increasingly
+          introspective and doing my best to exude the characteristics of Christ
+          in all that I do.
         </p>
       </div>
 
