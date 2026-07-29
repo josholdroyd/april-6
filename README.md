@@ -30,7 +30,7 @@ npm start       # serve the production build
 ## Where things live
 
 - `lib/events.ts` — the entire dataset: the 12 events, category list, category
-  accent colors, and the 9 footer sources. Edit event copy here.
+  accent colors, and the 11 footer sources. Edit event copy here.
 - `components/Timeline.tsx` — layout math and the two views (horizontal thread
   on desktop, vertical rail on mobile).
 - `components/EventCard.tsx` — a single event card and its expand behavior.

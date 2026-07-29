@@ -213,4 +213,6 @@ export const sources = [
   { label: "Was April 6th Jesus' Birthdate? — Meridian Magazine", url: "https://latterdaysaintmag.com/was-april-6th-jesus-birthdate/" },
   { label: "Centennial Observances — Encyclopedia of Mormonism", url: "https://eom.byu.edu/index.php/Centennial_Observances" },
   { label: "History of LDS General Conference — Deseret News", url: "https://www.deseret.com/2000/4/1/19499283/history-of-lds-general-conference/" },
+  { label: "Doctrine and Covenants 20:1 — ChurchofJesusChrist.org", url: "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/20?lang=eng&id=p1#p1" },
+  { label: "Doctrine and Covenants 135:3 — ChurchofJesusChrist.org", url: "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/135?lang=eng&id=p3#p3" },
 ];
