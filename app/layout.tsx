@@ -38,7 +38,7 @@ export default function RootLayout({
                 The Sixth of April
               </span>
               <span className="block text-[11px] uppercase tracking-[0.18em] text-ink-faint">
-                A recurring date
+                A recurring date in Church history
               </span>
             </Link>
             <NavLinks />
@@ -70,7 +70,7 @@ export default function RootLayout({
             <p className="mt-8 text-xs text-ink-faint">
               A student project for RELC 225. Historical entries are drawn from
               the sources above; the 1&nbsp;BC entry is an interpretation, not
-              settled doctrine.
+              necessarily canonized doctrine.
             </p>
           </div>
         </footer>
